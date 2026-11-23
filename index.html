@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0f172a">
+<link rel="manifest" href="./manifest.json">
+<link rel="stylesheet" href="./styles.css">
+<title>Inspección Visual PWA</title>
+</head>
+<body>
+<main>
+<h1>Inspección Visual PWA</h1>
+<p>Vista previa local de la cámara. No se guardan ni se envían imágenes.</p>
+<button id="btn-instalar" type="button" hidden>Instalar App</button>
+<p>En iPhone: Compartir → Agregar a pantalla de inicio.</p>
+<button id="btn-preparar-camara" type="button">Solicitar acceso a cámara</button>
+<section id="aviso-permiso" hidden>
+<h2>Antes de encender la cámara</h2>
+<p>Esta aplicación requiere acceso a tu cámara únicamente para mostrar una vista previa local en pantalla. Ninguna imagen se envía a servidores externos.</p>
+<p>Se solicitará primero la cámara trasera. No se utiliza el micrófono.</p>
+<button id="btn-confirmar-permiso" type="button">Aceptar y encender cámara</button>
+<button id="btn-cancelar-permiso" type="button">Cancelar</button>
+</section>
+<video id="visor-camara" autoplay playsinline muted></video>
+<p id="mensaje-estado" role="status" aria-live="polite">Cámara apagada.</p>
+<button id="btn-alternar-camara" type="button" disabled>Cambiar frontal / trasera</button>
+<button id="btn-apagar-camara" type="button" disabled>Apagar cámara</button>
+</main>
+<script src="./app.js"></script>
+</body>
+</html>
